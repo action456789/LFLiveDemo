@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -43,6 +44,14 @@
                                     <action selector="switchCamare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kbi-jp-l5u"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6C-YS-tvR">
+                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="333.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJs-Po-eUZ">
+                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="333.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -52,10 +61,22 @@
                             <constraint firstItem="bP6-Zc-T8c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="572" id="8d8-b3-pAd"/>
                             <constraint firstItem="fcV-V3-LqW" firstAttribute="leading" secondItem="SoJ-9W-qCq" secondAttribute="trailing" constant="43" id="Ac1-qP-pk3"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SoJ-9W-qCq" secondAttribute="bottom" constant="46" id="G1g-qK-SjW"/>
+                            <constraint firstItem="a6C-YS-tvR" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="M7O-wo-W5v"/>
+                            <constraint firstItem="rJs-Po-eUZ" firstAttribute="height" secondItem="a6C-YS-tvR" secondAttribute="height" id="MWA-xd-Syg"/>
+                            <constraint firstItem="a6C-YS-tvR" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="Mto-dg-Yz8"/>
                             <constraint firstItem="SoJ-9W-qCq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="64" id="Nqu-jv-69k"/>
                             <constraint firstItem="bP6-Zc-T8c" firstAttribute="leading" secondItem="fcV-V3-LqW" secondAttribute="trailing" constant="30" id="RSq-5q-gdv"/>
+                            <constraint firstItem="a6C-YS-tvR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dVl-sA-LPk"/>
+                            <constraint firstAttribute="trailing" secondItem="rJs-Po-eUZ" secondAttribute="trailing" id="feh-1Y-viC"/>
+                            <constraint firstItem="a6C-YS-tvR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lrz-Of-OFX"/>
+                            <constraint firstItem="rJs-Po-eUZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lvL-45-vse"/>
+                            <constraint firstItem="rJs-Po-eUZ" firstAttribute="width" secondItem="a6C-YS-tvR" secondAttribute="width" id="rld-rP-y5R"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pullView" destination="rJs-Po-eUZ" id="rzN-RQ-Rhw"/>
+                        <outlet property="pushView" destination="a6C-YS-tvR" id="pdl-Th-X4W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
